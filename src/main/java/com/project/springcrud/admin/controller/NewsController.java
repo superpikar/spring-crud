@@ -7,10 +7,18 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller("AdminNewsController")
 public class NewsController {
-	@RequestMapping("/admin")
-	public ModelAndView home(){
+	@RequestMapping("/admin/news")
+	public ModelAndView listNews(){
 		ModelMap model = new ModelMap();
 		model.addAttribute("name", "hahahaha!");
-        return new ModelAndView("admin/index", "model", model);
+        return new ModelAndView("admin/news/news-list", "model", model);
+	}
+	
+	@RequestMapping("/admin/news/new")
+	public ModelAndView newNews(){
+		ModelMap model = new ModelMap();
+		model.addAttribute("action", "new");
+		model.addAttribute("name", "hahahaha!");
+        return new ModelAndView("admin/news/news-single", "model", model);
 	}
 }

@@ -19,8 +19,8 @@
 	<nav class="nav has-shadow">
 		<div class="container">
 	  	<div class="nav-left">
-	    	<a class="nav-item" href="${pageContext.request.contextPath}/admin">
-	    		<h1 class="title">Pikar CMS</h1>
+	    	<a class="nav-item" href="${pageContext.request.contextPath}">
+	    		<h1 class="title">My Blog</h1>
 	      		<!-- <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo"> -->
 	    	</a>
 	  	</div>
@@ -36,35 +36,24 @@
   		<!-- Add the modifier "is-active" to display it on mobile -->
   		<div class="nav-right nav-menu">
     		<a class="nav-item" href="#">
-    			<b>${sessionScope.user.username}(<i>${sessionScope.user.role}</i>)</b>
+    			Menu 1
     		</a>
-    		<div class="nav-item" >
-    			<a href="<%=request.getContextPath()%>/admin?action=logout" class="button is-danger is-outlined">
-      				Logout
-      			</a>
-    		</div>
+    		<a class="nav-item" href="#">
+    			Menu 2
+    		</a>
   		</div>
 		</div>
 	</nav>
-	
 	<div id="app" class="container">
-		<div class="columns">
-			<div class="column is-2 is-fullheight">	
-				<aside data-accordion-group class="menu">
-					<div data-accordion>
-						<p data-control class="menu-label">General</p>
-						<ul data-content class="menu-list">
-							<li>
-								<a href="<%=request.getContextPath()%>/admin"><i class="fa fa-dashboard"></i> Dashboard</a>
-							</li>
-						</ul>					
-					</div>
-				</aside>
-			</div>
-			<div class="column is-10">
-				<jsp:doBody/>
-			</div>
-		</div>
+		<jsp:doBody/>
 	</div>
+	
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>//resources/front/js/SweetAlertWrapper.js"></script>		
+		
+	<jsp:invoke fragment="footer"/>	
 </body>
 </html>

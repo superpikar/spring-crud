@@ -43,10 +43,18 @@
 	</jsp:attribute>
 	
 	<jsp:body>
-		<h1 class="title">
-			Post List a.button
-		</h1>
-		
+		<div class="level">
+			<div class="level-left">
+				<div class="level-item">
+					<h1 class="title">Post List</h1>
+				</div>
+			</div>
+			<div class="level-right">
+				<div class="level-item">
+					<a class="button" href="${pageContext.request.contextPath}/admin/news/new">New Post</a>
+				</div>
+			</div>
+		</div>
 		
 		<table class="table">
 			<thead>
